@@ -24,6 +24,6 @@ jobs:
       - name: Run Vulture
         run: echo "Trainee should add command to run vulture"
       - name: Run tests
-        run: echo "Trainee should add command to run test"
+        run: python -m pytest tests/test_unit
 
 
