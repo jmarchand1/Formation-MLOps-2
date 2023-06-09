@@ -36,7 +36,7 @@ def create_date_features(data_frame: pd.DataFrame) -> pd.DataFrame:
     data_frame['date'] = pd.to_datetime(data_frame.Date_time, utc=True)
     data_frame['year'] = data_frame['date'].dt.year
     data_frame['month'] = data_frame['date'].dt.month
-    data_frame['seasonJMA'] = data_frame['month'].apply(lambda x: get_season(x))
+    data_frame['season'] = data_frame['month'].apply(lambda x: get_season(x))
     return data_frame
 
 
